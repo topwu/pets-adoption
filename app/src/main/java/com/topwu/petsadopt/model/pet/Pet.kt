@@ -1,0 +1,20 @@
+package com.topwu.petsadopt.model.pet
+
+data class Pet(val animalId: String,
+               val age: String,
+               val bacterin: String,
+               val bodyType: String,
+               val closedDate: String,
+               val colour: String,
+               val createTime: String,
+               val foundPlace: String,
+               val kind: String,
+               val openDate: String,
+               val place: String?,
+               val remark: String?,
+               val sex: String,
+               val status: String,
+               val sterilization: String,
+               val updateTime: String,
+               val shelter: Shelter,
+               val album: Album)

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="150dp"
+    android:layout_height="210dp"
+    android:layout_marginLeft="@dimen/default_layout_margin_halved"
+    android:layout_marginRight="@dimen/default_layout_margin_halved">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/placePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/monkey_forest_1"
+            fresco:placeholderImageScaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/default_layout_margin_halved"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:textAppearance="@style/RobotoBold"
+            android:textColor="@color/item_place_title"
+            android:textSize="@dimen/textsize_medium"
+            android:textStyle="bold"
+            android:transitionName="titleTransition"
+            tools:text="Monkey Forest"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin_quartered"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/default_layout_margin"
+                android:layout_height="@dimen/default_layout_margin"
+                android:layout_marginEnd="@dimen/default_layout_margin_halved"
+                android:layout_marginStart="@dimen/default_layout_margin_halved"
+                android:src="@drawable/ic_clock_small"/>
+
+            <TextView
+                android:id="@+id/opening_hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/RobotoThin"
+                android:textColor="@color/item_place_subtitle"
+                android:textSize="@dimen/textsize_small"
+                tools:text="08:30 - 18:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin_halved"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/default_layout_margin"
+                android:layout_height="@dimen/default_layout_margin"
+                android:layout_marginEnd="@dimen/default_layout_margin_halved"
+                android:layout_marginStart="@dimen/default_layout_margin_halved"
+                android:src="@drawable/ic_price_small"/>
+
+            <TextView
+                android:id='@+id/price'
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/RobotoThin"
+                android:textColor="@color/item_place_subtitle"
+                android:textSize="@dimen/textsize_small"
+                tools:text="40000 IDR"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/number"
+        android:layout_width="@dimen/item_recycler_number_dimen"
+        android:layout_height="@dimen/item_recycler_number_dimen"
+        app:layout_anchor="@id/container"
+        app:layout_anchorGravity="top|center"/>
+</android.support.v7.widget.CardView>
